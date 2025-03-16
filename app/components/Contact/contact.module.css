@@ -1,0 +1,122 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 80vh;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.first {
+    
+    text-align: center;
+    background-color: #ffbb0036;
+    width: 30%;
+    height: 100%;
+}
+
+.second {
+    padding: 2rem;
+    width: 60%;
+    height: 100%;
+    background-color: #d11212;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.second form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+}
+.flexIt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.flexIt input {
+    width: 80%;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+}
+.flexIt input::placeholder{
+    color:white;
+}
+.datePicker{
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-radius: 10px;
+    height: 35px;
+    outline: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.datePicker input{
+    width: 50%;
+    color: #fff;
+    border: none;
+    outline: none;
+
+}
+.datePicker svg{
+    color: white;
+    font-size: 1.2rem;
+}
+.textarea {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    outline: none;
+}
+.textarea::placeholder{
+    color:white;
+}
+.submitButton{
+    width: 100px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: goldenrod;
+    color: #d11212;
+    cursor: pointer;
+    outline: none;
+
+}
+.datePickerInput{
+display: none;
+}
+@media (max-width:1100px) {
+    .contact{
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .contact .first{
+       width: 100%;
+       border-radius: 10px;
+}
+    .contact .second{
+       width: 100%;
+       border-radius: 10px;
+    }
+}

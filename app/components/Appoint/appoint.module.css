@@ -1,0 +1,233 @@
+.appoint{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 40vh;
+    background-color: #7e0404;
+    color: #ffbb00;
+    padding: 0 2rem;
+}
+.appoint .svg{
+    font-size: 4rem;
+}
+.appoint h1{
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.appoint p{
+    font-size: 1.2rem;
+
+}
+.appoint div{
+    width: 60%;
+}
+.appoint button svg{
+    font-size: 2rem;
+    margin-left: 10px;
+}
+.appoint button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffbb00;
+    color: #7e0404;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+.work{
+    background-color: #ffbb0036;
+    padding: 2rem;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text h1{
+    font-size: 3rem;
+    color: #7e0404;
+}
+.text p{
+    font-size: 1.2rem;
+    color: grey;
+    width: 80%;
+    margin-left: 10px;
+}
+.p{
+    color: #7e0404;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.icons div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+.icons div img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffbb00;
+    padding: 15px;
+    margin-bottom: 1rem;
+}
+.icons div p{
+    font-size: 1.2rem;
+    color: rgb(77, 75, 75);   
+}
+
+.faq{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faqs{
+    width: 50%;
+
+}
+.que{
+    display: flex;
+    align-items: center;
+}
+.que svg{
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+.faqs p{
+    margin-left: 2rem;
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.show {
+    max-height: 100px; /* Adjust this value based on the content */
+    opacity: 1;
+}
+@media(max-width:1000px){
+    .appoint h1{
+        font-size: 2rem;
+    }
+    .appoint button{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .appoint .first{
+        margin: 0 1rem;
+    }
+    .appoint .first p{
+        font-size: 13px;
+    }
+   
+}
+@media(max-width:950px){
+    .appoint h1{
+        font-size: 2rem;
+    }
+    .appoint button{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .appoint .first{
+        margin: 0 1rem;
+    }
+    .appoint .first p{
+        font-size: 13px;
+    }
+    .text p{
+        width: 100%;
+   }
+   .icons{
+    width: 100%;
+    text-align: center;
+   }
+   .icons div img{
+    width: 100px;
+    height: 100px;
+   }
+   .faq img{
+    width: 300px;
+    height: 400px;
+   }
+   .faq h1{
+    font-size: 2.6rem;
+    color: #7e0404;
+    margin-bottom: 1rem;
+   }
+}
+@media(max-width:700px){
+    .appoint{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+        height: 80vh;
+    }
+    .appoint button{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .appoint h1{
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .appoint .first p{
+        font-size: 16px;
+    }
+    .appoint .svg{
+        font-size: 6rem;
+        margin: 1rem auto;
+    }
+    .text{
+        flex-direction: column;
+    }
+    .icons {
+        flex-direction: column;
+    }
+    .icons div p{
+        font-size: 2rem;
+
+    }
+    .icons div{
+        margin-bottom: 1rem;
+    }
+    .icons div img{
+        width: 250px;
+        height: 250px;
+       }
+       .faq{
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+       }
+       .faq h1{
+        width: 100%;
+       }
+}
+@media(max-width:750px){
+    .faq img{
+        width: 90%;
+        height: 400px;
+    }
+    .faqs {
+        width: 100%;
+    }
+}

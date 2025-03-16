@@ -1,0 +1,112 @@
+.medserv{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Popins', sans-serif;
+    gap: 2rem;
+}
+
+.med1{
+    background-color: rgba(255, 217, 0, 0.1);
+    padding: 2rem;
+    border-bottom-right-radius: 30% 50%;
+    border-top-right-radius: 30% 50%;
+
+}
+.med1 h1{
+    color: #7e0404;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.med1 p{
+    font-size: 2rem;
+}
+.med2 {
+    display: flex;
+    margin: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ffbb00;
+}
+
+.med2::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffbb00;
+    transition: top 0.3s ease;
+    z-index: 0;
+}
+.med2:hover::before {
+    top: 0;
+}
+.med2 h3, .med2 p, .med2 .svg{
+    position: relative;
+    z-index: 1;
+    margin-left: 2rem;
+    color: #7e0404;
+    margin: 1rem;
+}
+.med2 h3{
+    font-size: 1.5rem;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+.med2 .svg{
+    font-size: 4rem;
+  
+}
+.med2 button svg{
+    font-size: 1.5rem;
+}
+.med2 button {
+    margin-top: auto;
+    align-self: flex-end;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #7e0404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffbb00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+@media(max-width:950px){
+    .medserv{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .med1 h1{
+        color: #7e0404;
+        font-size: 2.5rem;
+        
+    }
+    .med1 p{
+        font-size: 1.3rem;
+    }
+}
+@media(max-width:700px){
+    .medserv{
+        grid-template-columns: 1fr;
+    }
+    .med1 h1{
+        color: #7e0404;
+        font-size: 3.5rem;
+        
+    }
+    .med1 p{
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,70 @@
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+}
+.blogItem{
+    width: 35%;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 1rem;
+}
+.blogItem:hover{
+    transform: translateY(-10px);
+}
+.blogItem img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.blogItem h3{
+    margin-top: 1rem;
+    color: #7e0404;
+
+}
+.blogItem p{
+    margin-top: 1rem;
+    color: grey;
+}
+.blogItem button {
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #7e0404;
+    font-size: 1.3rem;
+    background-color: transparent;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.blogItem button:hover {
+    color: #ffbb00; /* Change this to the color you want on hover */
+    transform: translateY(-5px); /* Optional: Add a slight lift effect */
+}
+
+.blogItem button svg {
+    transition: transform 0.3s ease;
+}
+
+.blogItem button:hover svg {
+    transform: rotate(360deg); /* Rotate the SVG 360 degrees on hover */
+}
+
+
+@media(max-width:900px){
+    .blog{
+        flex-direction: column;
+    }
+    .blogItem{
+        width: 100%;
+    }
+}

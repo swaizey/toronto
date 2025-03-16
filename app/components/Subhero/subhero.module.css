@@ -1,0 +1,64 @@
+.subhero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-family:'Poppins', 'Roboto', sans-serif;
+
+}
+.art2{
+    background-color: #d11212;
+    padding: 2rem;
+    position: relative;
+}
+.art2 h3{
+    color: white;
+    margin-bottom: 1rem;
+}
+.art2 p{
+    color: rgb(180, 184, 174);
+}
+.art,.art2{
+    height: 200px;
+    
+}
+
+.art h1{
+    background-color: gold;
+    height: 82%;
+    padding: 1rem;
+}
+.art p{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+}
+.art2 svg{
+    color: gold;
+    font-size: 25px;
+}
+
+.divider {
+    width: 1px;
+    background-color: gold;
+    height: 100px;
+    position: absolute;
+    left: 60%;
+    transform: translateX(-60%);
+}
+@media(max-width:800px){
+    .subhero{
+        flex-direction: column;
+        position: relative;
+    }
+    .divider{
+        position: absolute;
+        height: 1px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+       margin-top: 12rem;
+    }
+}

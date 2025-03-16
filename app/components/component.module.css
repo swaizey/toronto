@@ -1,0 +1,282 @@
+/* Existing CSS */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    background-color: #d11212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid gold;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: gold;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul li {
+    list-style: none;
+    margin: 0 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    color: gold; /* Change this to the color you want on hover */
+}
+
+.nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value based on your design */
+    width: 0;
+    height: 2px; /* Adjust this value based on your design */
+    background-color: gold; /* Change this to the color you want for the border */
+    transition: width 0.3s ease;
+}
+
+.nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .list {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d11212;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect for Big Screens */
+@media (min-width: 769px) {
+    .dropdown:hover .list {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+/* Dropdown Sidenav Styles */
+.dropdownSidenav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    height: 100vh;
+    width: 250px;
+    background-color: #d11212;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1001; /* Ensure it appears above other content */
+}
+
+.dropdownSidenavOpen {
+    right: 0; /* Slide in from the right */
+}
+
+.dropdownCloseIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dropdownSidenav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dropdownSidenav ul li {
+    list-style: none;
+    transition: color 0.3s ease;
+}
+
+.dropdownSidenav ul li:hover {
+    color: gold; /* Change this to the color you want on hover */
+}
+
+/* Responsive Styles */
+.menuIcon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hideLg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hide {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .li {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 70vh;
+        width: 250px;
+        background-color: #d11212;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 4rem;
+        transition: right 0.3s ease;
+        padding-left: 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); /* Add box-shadow */
+    }
+
+    .li.sideNavOpen {
+        right: 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul li {
+        margin: 1rem 0;
+    }
+
+    .p {
+        margin-top: 3rem;
+    }
+
+    /* Close Icon Inside Sidenav */
+    .closeIcon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* @@@@@@@@@@@@FOOTER@@@@@@@@@@@@@ */
+
+.footer{
+    background-color: #d11212;
+    color: white;
+    width: 100%;
+    margin-top: -2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerContainer div{
+    flex: 1;
+}
+.first{
+    margin-right: 2rem;
+}
+.footerContainer h1{
+    margin-bottom: 3rem;
+}
+.footerContainer p, .footerContainer a{
+    margin-bottom: 1rem;
+}
+.second a{
+    display: block;
+}
+.footerContainer svg{
+    margin-right: 10px;
+    color: gold;
+    font-size: 1.4rem;
+}
+.second, .third, .fourth{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+ .input{
+    border: 2px solid wheat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+ }
+ .input input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+ }
+ .input input::placeholder{
+    color: white;
+ }
+ .input button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+ }
+ .input button svg{
+    margin-left: 5px;
+ }
+@media (max-width:1050px) {
+    .footer .footerContainer{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+    
+}
+@media (max-width:650px) {
+    .footer .footerContainer{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+}
