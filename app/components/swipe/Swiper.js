@@ -23,29 +23,30 @@ import mama from '@/public/mama.jpg';
 
 export default function App() {
   const [screenSize, setScreenSize] = useState({
-    width: typeof window !== 'undefined' ? window.innerWidth : 0, // Check if window is defined
-    height: typeof window !== 'undefined' ? window.innerHeight : 0, // Check if window is defined
+    width: 0, // Initialize to 0
+    height: 0, // Initialize to 0
   });
 
   useEffect(() => {
-    // Ensure window is defined before adding event listener
-    if (typeof window !== 'undefined') {
-      const handleResize = () => {
-        setScreenSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
+    // Set screen size only on the client
+    setScreenSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
 
-      // Add event listener for window resize
-      window.addEventListener('resize', handleResize);
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
 
-      // Cleanup function to remove the event listener
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }
-  }, []); // Empty dependency array ensures this runs only on mount and unmount
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Run only once on mount
 
   
   const renderStars = (rating) => {
@@ -66,10 +67,8 @@ export default function App() {
     );
   };
   let perView
-  if(screenSize.width <=900){
-    perView = 2
-  }else{
-    perView = 3
+  if(screenSize.width < 600){
+    perView = 1
   }
 
   return (

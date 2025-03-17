@@ -10,16 +10,16 @@ import { motion } from "motion/react"
 const About = () => {
   return (
     <div className={Styles.about}>
-      <motion.div className={Styles.img}
+      <motion.div style={{backgroundColor:'red'}} className={Styles.img}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className={Styles.imgs}>
+        <div  className={Styles.imgs}>
       <Image src={doc4} width={300} height={300} alt='doc'/>
       <Image src={doc5} width={300} height={300} alt='doc'/>
         </div>
-      <Image className={Styles.w}  src={opera} width={300} height={300} alt='doc'/>
+      <Image  className={Styles.w}  src={opera} width={300} height={300} alt='doc'/>
 
       </motion.div>
       <motion.div className={Styles.text}

@@ -21,7 +21,7 @@ const Appoint = () => {
 
     return (
         <>
-            <div className={Styles.appoint}>
+            <div  className={Styles.appoint}>
                 <BsCalendarHeartFill className={Styles.svg} />
                 <div className={Styles.first}>
                     <h1>Open For Appointments</h1>
@@ -68,7 +68,7 @@ const Appoint = () => {
                 </motion.div>
             </div>
 
-            <div className={Styles.faq}>
+            <div style={{backgroundColor:'red'}} className={Styles.faq}>
                 <motion.div 
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
