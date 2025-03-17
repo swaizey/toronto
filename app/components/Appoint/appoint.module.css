@@ -7,6 +7,7 @@
     background-color: #7e0404;
     color: #ffbb00;
     padding: 0 2rem;
+    overflow-x: hidden;
 }
 .appoint .svg{
     font-size: 4rem;
@@ -186,7 +187,7 @@
         margin: 0 auto;
     }
     .appoint h1{
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
     }
     .appoint .first p{

@@ -67,8 +67,10 @@ export default function App() {
     );
   };
   let perView
-  if(screenSize.width < 600){
+  if(screenSize.width < 800){
     perView = 1
+  }else{
+    perView = 3
   }
 
   return (

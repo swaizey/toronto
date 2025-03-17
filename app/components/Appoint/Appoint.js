@@ -68,13 +68,13 @@ const Appoint = () => {
                 </motion.div>
             </div>
 
-            <div style={{backgroundColor:'red'}} className={Styles.faq}>
+            <div  className={Styles.faq}>
                 <motion.div 
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                    <Image src={docs} alt="check" width={500} height={500} />
+                    <Image src={docs} alt="check" width={500} height={500} style={{objectFit:'contain'}} />
                 </motion.div>
                 <motion.div className={Styles.faqs}
                   initial={{ opacity: 0, x: 50 }}

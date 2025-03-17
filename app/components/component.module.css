@@ -91,7 +91,7 @@
     top: 0;
     right: -100%; /* Start off-screen */
     height: 100vh;
-    width: 250px;
+    width: 200px;
     background-color: #d11212;
     padding: 2rem;
     transition: right 0.3s ease;
@@ -277,6 +277,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+     .first,.second,.third{
+        border-bottom: 1px solid gold;
+        margin-bottom: 1rem;
+    }
+    .fourth h1{
+        margin-bottom: 10px;
     }
     
 }

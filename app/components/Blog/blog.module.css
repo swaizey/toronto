@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-top: 4rem;
     margin-bottom: 2rem;
-
+    overflow-x: hidden;
 }
 .blogItem{
     width: 35%;

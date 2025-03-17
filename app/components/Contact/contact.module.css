@@ -3,9 +3,10 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    height: 80vh;
+    height: 100vh;
     border-radius: 10px;
-    margin: 0;
+    overflow-x: hidden;
+ 
 }
 
 .first {
@@ -106,9 +107,8 @@ display: none;
 @media (max-width:1100px) {
     .contact{
         flex-direction: column;
-        height: 100vh;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     
     .contact .first{
@@ -120,15 +120,19 @@ display: none;
        border-radius: 10px;
     }
 }
-
 @media (max-width:600px) {
-    .second{
-        margin-bottom: 1.5rem;
+    .contact{
+        height: 120vh;
+        width: 100%;
+       
+    }
+    .first, .second{
+        width: 90%;
     }
     .flexIt{
         flex-direction: column;
     }
-    .textarea{
-        margin-top: 1rem;
-    }
+  .textarea{
+    margin-top: 1rem;
+  }
 }

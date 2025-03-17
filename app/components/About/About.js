@@ -10,7 +10,7 @@ import { motion } from "motion/react"
 const About = () => {
   return (
     <div className={Styles.about}>
-      <motion.div style={{backgroundColor:'red'}} className={Styles.img}
+      <motion.div  className={Styles.img}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
